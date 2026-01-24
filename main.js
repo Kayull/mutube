@@ -106,7 +106,7 @@ if (document.mutube) return;
 document.mutube = true;
 
 var script = document.createElement('script');
-script.src = "https://cdn.jsdelivr.net/npm/@foxreis/tizentube/dist/userScript.js";
+script.src = "https://cdn.jsdelivr.net/npm/@foxreis/tizentube/dist/userScript.js?v=" + Date.now();
 script.async = true;
 document.head.appendChild(script);
 
