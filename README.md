@@ -19,6 +19,24 @@ MuTube has been tested with YouTube 4.54.01 on an Apple TV 4K.
 make
 ```
 
+`make` looks for the decrypted IPA in this order:
+
+1. `IPA=...` passed on the command line
+2. `./ipa/YouTube_4.54.01_decrypted.ipa`
+3. The only `.ipa` file under `./ipa/`
+
+Examples:
+
+```bash
+mkdir -p ipa
+cp /path/to/YouTube_decrypted.ipa ./ipa/
+make
+```
+
+```bash
+make IPA=/path/to/YouTube_decrypted.ipa
+```
+
 Output: `mutube.ipa`
 
 Optional printf tracing in stubs:
